@@ -1,7 +1,7 @@
-// window.addEventListener('contextmenu', function (e) {
-//     // Cancel the default right-click behavior
-//     e.preventDefault();
-// }, false);
+window.addEventListener('contextmenu', function (e) {
+    // Cancel the default right-click behavior
+    e.preventDefault();
+}, false);
 
 function clearBar(){
     document.getElementById("searchInput").value = "";
