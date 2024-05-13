@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Search</title>
+
+<style>
+    body{
+        background-color: rgb(232, 230, 230);
+        font-family:Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+    }
+
+    #imageContainer {
+        margin: 20px auto;
+        text-align: center;
+    }
+    .image {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    #result{
+        background-color: white;
+        margin: 2px;
+        padding: 15px;
+        border: 1px solid #c3c3c3;
+        /* border-radius: 12px; */
+        font-size: 20px;
+        z-index: -100;
+        margin-top: 95px;
+    }
+    input{
+        width: 50%;
+        height: 30px;
+        border: 1px solid #c3c3c3;
+        font-size: 15px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 15px;
+    box-shadow: 4px 4px 15px #9a9a9a;
+    z-index: 1000;
+    background-color: #fff; /* Add a background color if needed */
+}
+
+
+#search{
+        /* border-radius: 100px; */
+        height: 34px;
+        transform: translateY(-3%);
+        border: none;
+        background-color: rgb(0, 119, 255);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 767px) {
+            input{
+                margin-left: -15px;
+                width: 75%;
+            }
+        }
+</style>
+<script src="search.js"></script>
+</head>
+<body>
+    <div class="navBar">
+        <h4 style="margin-top: 5px; margin-bottom:5px; color: rgb(0, 119, 255);">Web Search</h4>
+        
+        <input type="text" id="searchInput" placeholder="Enter search term">
+        <button style="border: none; background: none; margin-left: -40px; cursor: pointer;" onclick="clearBar()">X</button>
+        <button id="search" onclick="searchWikipedia()">Search</button>
+    </div>
+    
+    <div id="result"></div>
+    <p style="text-align: center; color: gray;">Web Search may not be able to give all results. Check important info.</p>
+</body>
+</html>
